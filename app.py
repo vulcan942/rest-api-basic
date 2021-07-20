@@ -11,10 +11,9 @@ from db import db
 
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get(
-    "postgresql://htpnmyemrmfend:4495f5abb9067f74e219e4645984968902626ea620a49566e6677a300c987a66@ec2-52-6-211-59.compute-1.amazonaws.com:5432/d454c6lmfjl1im",
-    "sqlite:///data.db",
-)
+app.config[
+    "SQLALCHEMY_DATABASE_URI"
+] = "postgresql://htpnmyemrmfend:4495f5abb9067f74e219e4645984968902626ea620a49566e6677a300c987a66@ec2-52-6-211-59.compute-1.amazonaws.com:5432/d454c6lmfjl1im"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.debug = True
 app.config["SECRET_KEY"] = "nishant"
